@@ -113,7 +113,7 @@ export default class App extends Component {
                             />
                             Convert speech to text from an audio file.
                         </div>
-                        <a id="programatically" href="#" download="date.txt">Download speech result</a>
+                        <a id="programatically" href="#/" download="date.txt">Download speech result</a>
                     </div>
                     <div className="col-6 output-display rounded">
                         <code>{this.state.displayText}</code>
