@@ -79,6 +79,10 @@ export default class App extends Component {
             let displayText;
             if (result.reason === ResultReason.RecognizedSpeech) {
                 displayText = `RECOGNIZED: Text=${result.text}`
+                $("a#programatically").click(function(){
+                    var now = displayText;
+                    this.href = "data:text/plain;charset=UTF-8,"  + encodeURIComponent(now);
+                });
             } else {
                 displayText = 'ERROR: Speech was cancelled or could not be recognized. Ensure your microphone is working properly.';
             }
@@ -94,7 +98,7 @@ export default class App extends Component {
         return (
             
             <Container className="app-container">
-                <h1 className="display-4 mb-3">Speech sample app</h1>
+                <h1 className="display-4 mb-3">Speech To Text sample app</h1>
               
   
 
